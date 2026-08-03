@@ -79,47 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// ───── Quiz logic ─────
-let quizStep = 1;
-
-function quizNext() {
-  // Check if current step has a selection (for steps 1-4)
-  if (quizStep < 5) {
-    const currentStep = document.querySelector(`.quiz-step[data-step="${quizStep}"]`);
-    const checked = currentStep.querySelector('input[type="radio"]:checked');
-    if (!checked) {
-      // Shake the options to indicate selection needed
-      const options = currentStep.querySelector('.quiz-options');
-      options.style.animation = 'shake 0.3s';
-      setTimeout(() => options.style.animation = '', 300);
-      return;
-    }
-  }
-
-  if (quizStep < 5) {
-    document.querySelector(`.quiz-step[data-step="${quizStep}"]`).classList.remove('active');
-    quizStep++;
-    document.querySelector(`.quiz-step[data-step="${quizStep}"]`).classList.add('active');
-    updateQuizDots();
-  }
-}
-
-function quizPrev() {
-  if (quizStep > 1) {
-    document.querySelector(`.quiz-step[data-step="${quizStep}"]`).classList.remove('active');
-    quizStep--;
-    document.querySelector(`.quiz-step[data-step="${quizStep}"]`).classList.add('active');
-    updateQuizDots();
-  }
-}
-
-function updateQuizDots() {
-  document.querySelectorAll('.quiz-dot').forEach(dot => {
-    dot.classList.remove('active');
-  });
-  document.querySelector(`.quiz-dot[data-dot="${quizStep}"]`).classList.add('active');
-}
-
+// ───── Quiz logic (all steps visible) ─────
 function submitQuiz() {
   const name = document.getElementById('quiz-name').value.trim();
   const phone = document.getElementById('quiz-phone').value.trim();
@@ -132,16 +92,8 @@ function submitQuiz() {
   const success = document.querySelector('.quiz-success');
   success.classList.add('show');
   document.querySelector('.quiz-form').reset();
-  setTimeout(() => {
-    success.classList.remove('show');
-    // Reset to step 1
-    document.querySelector(`.quiz-step[data-step="${quizStep}"]`).classList.remove('active');
-    quizStep = 1;
-    document.querySelector('.quiz-step[data-step="1"]').classList.add('active');
-    updateQuizDots();
-    // Uncheck all radios
-    document.querySelectorAll('.quiz-option input[type="radio"]').forEach(r => r.checked = false);
-  }, 5000);
+  document.querySelectorAll('.quiz-option input[type="radio"]').forEach(r => r.checked = false);
+  setTimeout(() => success.classList.remove('show'), 5000);
 }
 
 // ───── Popup logic ─────

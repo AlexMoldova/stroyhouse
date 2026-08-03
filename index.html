@@ -83,8 +83,7 @@
     <p class="quiz-subtitle">Дайте відповідь на кілька питань — і ми підготуємо для вас попередній кошторис</p>
     
     <div class="quiz-container">
-      <!-- Step 1 -->
-      <div class="quiz-step active" data-step="1">
+      <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Крок 1. Що саме вам потрібно?</h3>
         <div class="quiz-options">
           <label class="quiz-option">
@@ -102,8 +101,7 @@
         </div>
       </div>
       
-      <!-- Step 2 -->
-      <div class="quiz-step" data-step="2">
+      <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Крок 2. Яка форма сходів планується?</h3>
         <div class="quiz-options">
           <label class="quiz-option">
@@ -125,8 +123,7 @@
         </div>
       </div>
       
-      <!-- Step 3 -->
-      <div class="quiz-step" data-step="3">
+      <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Крок 3. Яку деревину розглядаєте?</h3>
         <div class="quiz-options">
           <label class="quiz-option">
@@ -148,8 +145,7 @@
         </div>
       </div>
       
-      <!-- Step 4 -->
-      <div class="quiz-step" data-step="4">
+      <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Крок 4. Який стиль сходів вам ближчий?</h3>
         <div class="quiz-options">
           <label class="quiz-option">
@@ -163,27 +159,12 @@
         </div>
       </div>
       
-      <!-- Step 5 - Contact form -->
-      <div class="quiz-step" data-step="5">
-        <div class="quiz-form">
-          <input type="text" placeholder="Введіть ваше імʼя" class="quiz-input" id="quiz-name">
-          <input type="tel" placeholder="Введіть Ваш телефон" class="quiz-input" id="quiz-phone">
-          <button class="btn btn-gold btn-full" onclick="submitQuiz()">Отримати розрахунок</button>
-          <p class="quiz-privacy">«Натискаючи кнопку, ви даєте згоду на обробку персональних даних і погоджуєтесь з політикою конфіденційності»</p>
-          <div class="quiz-success">Дані успішно відправлено. Дякуємо!</div>
-        </div>
-      </div>
-      
-      <div class="quiz-nav">
-        <button class="btn btn-dark quiz-prev" onclick="quizPrev()">← Назад</button>
-        <div class="quiz-progress">
-          <span class="quiz-dot active" data-dot="1"></span>
-          <span class="quiz-dot" data-dot="2"></span>
-          <span class="quiz-dot" data-dot="3"></span>
-          <span class="quiz-dot" data-dot="4"></span>
-          <span class="quiz-dot" data-dot="5"></span>
-        </div>
-        <button class="btn btn-gold quiz-next" onclick="quizNext()">Далі →</button>
+      <div class="quiz-form">
+        <input type="text" placeholder="Введіть ваше імʼя" class="quiz-input" id="quiz-name">
+        <input type="tel" placeholder="Введіть Ваш телефон" class="quiz-input" id="quiz-phone">
+        <button class="btn btn-gold btn-full" onclick="submitQuiz()">Отримати розрахунок</button>
+        <p class="quiz-privacy">«Натискаючи кнопку, ви даєте згоду на обробку персональних даних і погоджуєтесь з політикою конфіденційності»</p>
+        <div class="quiz-success">Дані успішно відправлено. Дякуємо!</div>
       </div>
     </div>
   </div>

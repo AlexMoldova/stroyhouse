@@ -236,6 +236,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   overflow: hidden;
   padding-top: 122px;
+  background: var(--dark);
 }
 
 .hero-bg {
@@ -342,7 +343,7 @@ img { max-width: 100%; display: block; }
 
 /* ───── Quiz / Calculator ───── */
 .quiz {
-  background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+  background: var(--dark) !important;
   padding: 70px 0;
 }
 
@@ -352,6 +353,7 @@ img { max-width: 100%; display: block; }
   text-align: center;
   margin-bottom: 12px;
   line-height: 1.4;
+  color: var(--white);
 }
 
 .quiz-subtitle {
@@ -363,6 +365,7 @@ img { max-width: 100%; display: block; }
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--gray);
 }
 
 .quiz-container {
@@ -375,17 +378,7 @@ img { max-width: 100%; display: block; }
 }
 
 .quiz-step {
-  display: none;
-}
-
-.quiz-step.active {
-  display: block;
-  animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  margin-bottom: 25px;
 }
 
 .quiz-step-title {
@@ -477,11 +470,7 @@ img { max-width: 100%; display: block; }
 .quiz-success.show { display: block; }
 
 .quiz-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 25px;
-  gap: 15px;
+  display: none;
 }
 
 .quiz-prev, .quiz-next {
@@ -509,7 +498,7 @@ img { max-width: 100%; display: block; }
 
 /* ───── Stairs Types ───── */
 .stairs-types {
-  background: #f0f0f0;
+  background: #f0f0f0 !important;
   padding: 60px 0;
 }
 
