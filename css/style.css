@@ -244,6 +244,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('../assets/hero-bg.png') center center / cover no-repeat fixed;
+  background-size: 100% 100%;
   z-index: 0;
 }
 
@@ -261,14 +262,14 @@ img { max-width: 100%; display: block; }
   width: 100%;
   margin: 0 auto;
   padding: 0 20px 40px;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-line {
   width: 38px;
   height: 2px;
   background: var(--gold);
-  margin: 0 auto 15px;
+  margin: 0 0 15px 0;
 }
 
 .hero-subtitle {
@@ -306,7 +307,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 60px;
 }
 
