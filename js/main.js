@@ -79,6 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// ───── Mobile nav toggle ─────
+function toggleNav() {
+  document.getElementById('nav').classList.toggle('open');
+  document.getElementById('burger').classList.toggle('open');
+}
+
+function closeNav() {
+  document.getElementById('nav').classList.remove('open');
+  document.getElementById('burger').classList.remove('open');
+}
+
 // ───── Quiz logic (all steps visible) ─────
 function submitQuiz() {
   const name = document.getElementById('quiz-name').value.trim();

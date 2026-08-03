@@ -30,26 +30,28 @@
       </a>
     </div>
     <button class="btn btn-callback" onclick="openPopup('callback')">Передзвоніть мені</button>
+    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
 <!-- ═══════════════ NAVIGATION ═══════════════ -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#home" class="nav-link">Сходи</a>
-    <a href="#quiz" class="nav-link">Розрахувати вартість</a>
-    <a href="#features" class="nav-link">Переваги</a>
-    <a href="#works" class="nav-link">Виконані роботи</a>
-    <a href="#process" class="nav-link">Етапи робіт</a>
-    <a href="#testimonials" class="nav-link">Відгуки</a>
-    <a href="#contact" class="nav-link">Контакти</a>
+    <a href="#home" class="nav-link" onclick="closeNav()">Сходи</a>
+    <a href="#quiz" class="nav-link" onclick="closeNav()">Розрахувати вартість</a>
+    <a href="#features" class="nav-link" onclick="closeNav()">Переваги</a>
+    <a href="#works" class="nav-link" onclick="closeNav()">Виконані роботи</a>
+    <a href="#process" class="nav-link" onclick="closeNav()">Етапи робіт</a>
+    <a href="#testimonials" class="nav-link" onclick="closeNav()">Відгуки</a>
+    <a href="#contact" class="nav-link" onclick="closeNav()">Контакти</a>
   </div>
 </nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
   <div class="hero-container">
     <div class="hero-line"></div>
     <p class="hero-subtitle">Займаємось виробництвом та встановленням сходів вже понад 30 років</p>
@@ -61,14 +63,17 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat-box">
+        <img src="assets/stat-stairs.png" alt="" class="hero-stat-icon">
         <span class="hero-stat-num">30+</span>
         <span class="hero-stat-label">Кваліфіковані інженери</span>
       </div>
       <div class="hero-stat-box">
+        <img src="assets/stat-gear.png" alt="" class="hero-stat-icon">
         <span class="hero-stat-num">1995</span>
         <span class="hero-stat-label">Власне виробництво</span>
       </div>
       <div class="hero-stat-box">
+        <img src="assets/stat-factory.png" alt="" class="hero-stat-icon">
         <span class="hero-stat-num">Понад 2500</span>
         <span class="hero-stat-label">готових об'єктів</span>
       </div>
