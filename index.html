@@ -29,9 +29,7 @@
         <span>+380-50-574-61-41</span>
       </a>
     </div>
-    <button class="btn btn-callback" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      Передзвоніть мені
-    </button>
+    <button class="btn btn-callback" onclick="openPopup('callback')">Передзвоніть мені</button>
   </div>
 </header>
 
@@ -39,7 +37,7 @@
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#home" class="nav-link">Сходи</a>
-    <a href="#cta" class="nav-link">Розрахувати вартість</a>
+    <a href="#quiz" class="nav-link">Розрахувати вартість</a>
     <a href="#features" class="nav-link">Переваги</a>
     <a href="#works" class="nav-link">Виконані роботи</a>
     <a href="#process" class="nav-link">Етапи робіт</a>
@@ -58,8 +56,8 @@
     <h1 class="hero-title">ВИБЕРІТЬ СХОДИ ДЛЯ СВОГО БУДИНКУ</h1>
     <p class="hero-desc">Після вибору сходів ви отримаєте кошторис з ремонту та вартості матеріалів</p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn btn-gold">Розрахувати вартість сходів</a>
-      <a href="#works" class="btn btn-outline-gold">Дізнатись ціни</a>
+      <a href="#quiz" class="btn btn-gold">Розрахувати вартість сходів</a>
+      <a href="#stairs-types" class="btn btn-outline-gold">Дізнатись ціни</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat-box">
@@ -78,12 +76,178 @@
   </div>
 </section>
 
-<!-- ═══════════════ CTA BANNER ═══════════════ -->
-<section class="cta-banner" id="cta">
+<!-- ═══════════════ QUIZ / CALCULATOR ═══════════════ -->
+<section class="quiz" id="quiz">
   <div class="container">
-    <h2>🪜 ОТРИМАЙТЕ РОЗРАХУНОК ВАРТОСТІ ВАШИХ СХОДІВ</h2>
-    <p>Дайте відповідь на кілька питань — і ми підготуємо для вас попередній кошторис</p>
-    <a href="#contact" class="btn btn-dark">Замовити розрахунок</a>
+    <h2 class="quiz-title">🪜ОТРИМАЙТЕ РОЗРАХУНОК ВАРТОСТІ<br>ВАШИХ СХОДІВ</h2>
+    <p class="quiz-subtitle">Дайте відповідь на кілька питань — і ми підготуємо для вас попередній кошторис</p>
+    
+    <div class="quiz-container">
+      <!-- Step 1 -->
+      <div class="quiz-step active" data-step="1">
+        <h3 class="quiz-step-title">🔹 Крок 1. Що саме вам потрібно?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step1" value="Обшивка готового металевого або бетонного каркасу деревом">
+            <span class="quiz-option-text">🧱 Обшивка готового металевого або бетонного каркасу деревом</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step1" value="Виготовлення металокаркасу сходів">
+            <span class="quiz-option-text">🏗️ Виготовлення металокаркасу сходів</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step1" value="Повністю деревʼяні сходи">
+            <span class="quiz-option-text">🪵 Повністю деревʼяні сходи</span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="quiz-step" data-step="2">
+        <h3 class="quiz-step-title">🔹 Крок 2. Яка форма сходів планується?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="Пряма, без поворотів">
+            <span class="quiz-option-text">▭ Пряма, без поворотів</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="Г-подібна">
+            <span class="quiz-option-text">↱ Г-подібна</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="П-подібна">
+            <span class="quiz-option-text">⧉ П-подібна</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="Гвинтові сходи">
+            <span class="quiz-option-text">🌀 Гвинтові сходи</span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="quiz-step" data-step="3">
+        <h3 class="quiz-step-title">🔹 Крок 3. Яку деревину розглядаєте?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Сосна (економ)">
+            <span class="quiz-option-text">🌲 Сосна (економ)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Ясен (оптимальний варіант)">
+            <span class="quiz-option-text">🌳 Ясен (оптимальний варіант)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Інженерна дошка, ламінована дубом (оптимальний варіант)">
+            <span class="quiz-option-text">🪵 Інженерна дошка, ламінована дубом (оптимальний варіант)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Дуб (преміум)">
+            <span class="quiz-option-text">🌰 Дуб (преміум)</span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Step 4 -->
+      <div class="quiz-step" data-step="4">
+        <h3 class="quiz-step-title">🔹 Крок 4. Який стиль сходів вам ближчий?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step4" value="Відкрита (без підсходинок)">
+            <span class="quiz-option-text">◻️ Відкрита (без підсходинок)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step4" value="Закрита (з підсходинками)">
+            <span class="quiz-option-text">◼️ Закрита (з підсходинками)</span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Step 5 - Contact form -->
+      <div class="quiz-step" data-step="5">
+        <div class="quiz-form">
+          <input type="text" placeholder="Введіть ваше імʼя" class="quiz-input" id="quiz-name">
+          <input type="tel" placeholder="Введіть Ваш телефон" class="quiz-input" id="quiz-phone">
+          <button class="btn btn-gold btn-full" onclick="submitQuiz()">Отримати розрахунок</button>
+          <p class="quiz-privacy">«Натискаючи кнопку, ви даєте згоду на обробку персональних даних і погоджуєтесь з політикою конфіденційності»</p>
+          <div class="quiz-success">Дані успішно відправлено. Дякуємо!</div>
+        </div>
+      </div>
+      
+      <div class="quiz-nav">
+        <button class="btn btn-dark quiz-prev" onclick="quizPrev()">← Назад</button>
+        <div class="quiz-progress">
+          <span class="quiz-dot active" data-dot="1"></span>
+          <span class="quiz-dot" data-dot="2"></span>
+          <span class="quiz-dot" data-dot="3"></span>
+          <span class="quiz-dot" data-dot="4"></span>
+          <span class="quiz-dot" data-dot="5"></span>
+        </div>
+        <button class="btn btn-gold quiz-next" onclick="quizNext()">Далі →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STAIRS TYPES ═══════════════ -->
+<section class="section stairs-types" id="stairs-types">
+  <div class="container">
+    <div class="stairs-types-grid">
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type1.jpg" alt="Сходи прямий марш">
+        <div class="stairs-type-body">
+          <h3>Сходи прямий марш</h3>
+          <p class="stairs-price">Вартість: <span>від 60 000 грн.</span></p>
+          <p class="stairs-desc">При всій простоті не в кожен будинок підійде така конструкція. Потрібен довгий отвір</p>
+          <a href="#quiz" class="btn btn-outline-gold btn-sm">Оцінити мої сходи</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type2.jpg" alt="Сходи 90° з майданчиком">
+        <div class="stairs-type-body">
+          <h3>Сходи 90° з майданчиком</h3>
+          <p class="stairs-price">Вартість: <span>від 62 000 грн.</span></p>
+          <p class="stairs-desc">Поворотні сходи - найпоширеніша конфігурація</p>
+          <a href="#quiz" class="btn btn-outline-gold btn-sm">Оцінити мої сходи</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type3.jpg" alt="Сходи забіжні">
+        <div class="stairs-type-body">
+          <h3>Сходи забіжні</h3>
+          <p class="stairs-price">Вартість: <span>64 000 грн.</span></p>
+          <p class="stairs-desc">Для таких сходів досить невеликого отвору</p>
+          <a href="#quiz" class="btn btn-outline-gold btn-sm">Оцінити мої сходи</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type4.jpg" alt="Сходи 180° забіжні">
+        <div class="stairs-type-body">
+          <h3>Сходи 180° забіжні</h3>
+          <p class="stairs-price">Вартість: <span>64 000 грн.</span></p>
+          <p class="stairs-desc">Забіжні щаблі роблять сходи зручними та при цьому економиться місце</p>
+          <a href="#quiz" class="btn btn-outline-gold btn-sm">Оцінити мої сходи</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type5.jpg" alt="Парадні сходи">
+        <div class="stairs-type-body">
+          <h3>Парадні сходи</h3>
+          <p class="stairs-price">Вартість: <span>77 000 грн.</span></p>
+          <p class="stairs-desc">Такі сходи стануть окрасою для будь-якого будинку та продемонструють високий статус власника.</p>
+          <a href="#quiz" class="btn btn-outline-gold btn-sm">Оцінити мої сходи</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type6.jpg" alt="Сходи відкриті на металевому каркасі">
+        <div class="stairs-type-body">
+          <h3>Сходи відкриті на металевому каркасі</h3>
+          <p class="stairs-price">Вартість: <span>75 000 грн.</span></p>
+          <p class="stairs-desc">Для таких сходів досить невеликого отвору</p>
+          <a href="#quiz" class="btn btn-outline-gold btn-sm">Оцінити мої сходи</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -91,7 +255,7 @@
 <section class="section" id="about">
   <div class="container">
     <h2 class="section-title">МИ ПОДБАЄМО ПРО ВАШУ БЕЗПЕКУ</h2>
-    <p class="section-subtitle">Замовте надійні сходи для вашого будинку</p>
+    <p class="section-subtitle">ЗАМОВТЕ НАДІЙНІ СХОДИ ДЛЯ ВАШОГО БУДИНКУ</p>
     <div class="safety-grid">
       <div class="safety-item">
         <img src="assets/safety1.jpg" alt="">
@@ -114,13 +278,20 @@
         <p>Дізнайтеся вартість сходів та огорожі для вашого приміщення.</p>
       </div>
     </div>
+    <div class="safety-cta">
+      <a href="#quiz" class="btn btn-gold">Розрахувати вартість</a>
+    </div>
   </div>
 </section>
 
 <!-- ═══════════════ FEATURES ═══════════════ -->
 <section class="section section-darker" id="features">
   <div class="container">
-    <h2 class="section-title">STROYHOUSE — експерт у виробництві сходів із 1995 року</h2>
+    <div class="features-header">
+      <img src="assets/logo.png" alt="STROYHOUSE" class="features-logo">
+      <span class="features-logo-text">STROY <span class="logo-accent">HOUSE</span></span>
+      <h2 class="section-title features-title">експерт у виробництві сходів із 1995 року</h2>
+    </div>
     <div class="features-grid">
       <div class="feature-card">
         <img src="assets/feature1.jpg" alt="">
@@ -156,7 +327,7 @@
           <img src="assets/work1.jpg" alt="">
           <div class="work-body">
             <h3>ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
-            <p>Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
+            <p>Встановили центральну стійку, поручні та спіралі<br>Навколо металевого стрижня закріпили клиноподібні проступи 750 мм.<br>Потім закріпили щаблі до стійки перил.<br>Матеріал сходинок: <strong>ясень</strong>.</p>
             <span class="work-tag">Двоповерховий котедж, Київська обл.</span>
           </div>
         </div>
@@ -164,7 +335,7 @@
           <img src="assets/work2.jpg" alt="">
           <div class="work-body">
             <h3>ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
-            <p>Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
+            <p>Встановили центральну стійку, поручні та спіралі<br>Навколо металевого стрижня закріпили клиноподібні проступи 750 мм.<br>Потім закріпили щаблі до стійки перил.<br>Матеріал сходинок: <strong>ясень</strong>.</p>
             <span class="work-tag">Двоповерховий котедж, Київська обл.</span>
           </div>
         </div>
@@ -172,7 +343,7 @@
           <img src="assets/work3.jpg" alt="">
           <div class="work-body">
             <h3>ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
-            <p>Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
+            <p>Встановили центральну стійку, поручні та спіралі<br>Навколо металевого стрижня закріпили клиноподібні проступи 750 мм.<br>Потім закріпили щаблі до стійки перил.<br>Матеріал сходинок: <strong>ясень</strong>.</p>
             <span class="work-tag">Двоповерховий котедж, Київська обл.</span>
           </div>
         </div>
@@ -213,18 +384,18 @@
   </div>
 </section>
 
-<!-- ═══════════════ SHOWCASE ═══════════════ -->
+<!-- ═══════════════ SHOWCASE GALLERY ═══════════════ -->
 <section class="section">
   <div class="container">
     <div class="showcase-grid">
-      <div class="showcase-item"><img src="assets/stairs1.jpg" alt=""></div>
-      <div class="showcase-item"><img src="assets/stairs2.jpg" alt=""></div>
-      <div class="showcase-item"><img src="assets/stairs3.jpg" alt=""></div>
-      <div class="showcase-item"><img src="assets/stairs4.jpg" alt=""></div>
       <div class="showcase-item"><img src="assets/stairs5.jpg" alt=""></div>
       <div class="showcase-item"><img src="assets/stairs6.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs2.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs1.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs3.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs4.jpg" alt=""></div>
       <div class="showcase-item"><img src="assets/stairs7.jpg" alt=""></div>
-      <div class="showcase-item"><img src="assets/stairs8.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/work4.jpg" alt=""></div>
     </div>
   </div>
 </section>
@@ -236,9 +407,9 @@
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p>Наша сім'я давно хотіла переїхати до власного затишного будинку. Придбали будинок нашої мрії, і одразу зіткнулися з необхідністю замінити сходи, що ве...</p>
-        <p class="testimonial-text-2">Знайомі порекомендували звернутися до StroyHouse. Наступного дня після звернення, інженери компанії оглянули наші сходи та склали кошторис на їх відно...</p>
-        <p class="testimonial-text-2">Тепер ми з дружиною не турбуємося за безпеку наших дітей, чиї кімнати знаходяться на другому поверсі. Дякуємо StroyHouse за гарні та безпечні сходи на...</p>
+        <p>Наша сім'я давно хотіла переїхати до власного затишного будинку. Придбали будинок нашої мрії, і одразу зіткнулися з необхідністю замінити сходи, що ведуть на другий поверх.</p>
+        <p>Знайомі порекомендували звернутися до StroyHouse. Наступного дня після звернення, інженери компанії оглянули наші сходи та склали кошторис на їх відновлення.</p>
+        <p>Тепер ми з дружиною не турбуємося за безпеку наших дітей, чиї кімнати знаходяться на другому поверсі. Дякуємо StroyHouse за гарні та безпечні сходи на косоурах!</p>
         <div class="testimonial-author">
           <img src="assets/comment1.jpg" alt="">
           <div class="author-info">
@@ -250,8 +421,8 @@
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
         <p>Протягом 2 років ми з чоловіком будували великий котедж за Києвом. У процесі будівництва вирішили замовити самонесучі сходи. Такі ж нещодавно компанія StroyHouse встановила в сусідньому будинку.</p>
-        <p class="testimonial-text-2">На початку інженери виконали розрахунки та зробили візуальний макет сходів. Як матеріал для сходів ми вибрали ясен. Нам дуже сподобалося те, як добре...</p>
-        <p class="testimonial-text-2">Дякуємо компанії StroyHouse і розраховуємо на подальшу співпрацю!</p>
+        <p>На початку інженери виконали розрахунки та зробили візуальний макет сходів. Як матеріал для сходів ми вибрали ясен. Нам дуже сподобалося те, як добре сходи вписалися в інтер'єр приміщення.</p>
+        <p>Дякуємо компанії StroyHouse і розраховуємо на подальшу співпрацю!</p>
         <div class="testimonial-author">
           <img src="assets/comment2.jpg" alt="">
           <div class="author-info">
@@ -263,8 +434,8 @@
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
         <p>Коли постало питання встановлення сходів, я багато часу витратив на вивчення інформації, спілкуванні з різними фірмами та фабриками.</p>
-        <p class="testimonial-text-2">Коли зателефонував до StroyHouse, одразу зрозумів, у сходах вони розуміються. Сходи, річ не з дешевих і мені був важливий кожен момент.</p>
-        <p class="testimonial-text-2">У результаті ми дійшли рішення не економити на сходах і правильно зробили. Через три роки сходи як нові!</p>
+        <p>Коли зателефонував до StroyHouse, одразу зрозумів, у сходах вони розуміються. Сходи, річ не з дешевих і мені був важливий кожен момент.</p>
+        <p>У результаті ми дійшли рішення не економити на сходах і правильно зробили. Через три роки сходи як нові!</p>
         <div class="testimonial-author">
           <img src="assets/comment3.jpg" alt="">
           <div class="author-info">
@@ -299,12 +470,12 @@
           <input type="text" placeholder="Ваше Ім'я" required>
         </div>
         <div class="form-group">
-          <input type="tel" placeholder="Ваш телефон" required>
+          <input type="tel" placeholder="Введіть Ваш телефон" required>
         </div>
         <div class="form-group">
           <textarea placeholder="Ваше повідомлення" required></textarea>
         </div>
-        <button type="submit" class="btn btn-gold btn-full">Надіслати</button>
+        <button type="submit" class="btn btn-gold btn-full">Проконсультуватися</button>
         <p class="form-privacy">Натискаючи на кнопку, ви погоджуєтесь на обробку персональних даних</p>
         <div class="form-success">Дані успішно відправлено. Дякуємо!</div>
       </form>
@@ -317,14 +488,20 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="STROYHOUSE" class="footer-logo">
+        <div class="footer-logo-wrap">
+          <img src="assets/logo.png" alt="STROYHOUSE" class="footer-logo">
+          <span class="footer-logo-text">STROY <span class="logo-accent">HOUSE</span></span>
+        </div>
         <p>Виготовлення сходів, огорож та металевих конструкцій під ключ у Києві та Київській області</p>
       </div>
       <div class="footer-col">
         <a href="mailto:stroyhouse.kiev@gmail.com" class="footer-email">stroyhouse.kiev@gmail.com</a>
-        <p class="footer-legal">ФОП КОСТЮК ВАСИЛЬ ВОЛОДИМИРОВИЧ</p>
+        <a href="tel:+380505746141" class="footer-phone">+380-50-574-61-41</a>
+        <button class="btn btn-callback footer-callback" onclick="openPopup('callback')">Передзвоніть мені</button>
+        <p class="footer-legal">ФОП КОСТЮК ВАСИЛЬ ВОЛОДИМИРОВИЧ.</p>
         <p class="footer-legal">ІПН 2508511753</p>
         <p class="footer-legal">м. Київ вул. Регенераторна 4</p>
+        <a href="#" class="footer-privacy-link">Політика конфіденційності</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -332,6 +509,23 @@
     </div>
   </div>
 </footer>
+
+<!-- ═══════════════ POPUP ═══════════════ -->
+<div class="popup-overlay" id="popup-overlay" onclick="closePopup(event)">
+  <div class="popup-box" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <h3 class="popup-title">Замовте зворотній дзвінок</h3>
+    <p class="popup-subtitle">Заощаджуйте час прямо зараз</p>
+    <a href="tel:+380505746141" class="popup-phone">+380505746141</a>
+    <form class="popup-form" onsubmit="return false;">
+      <input type="text" placeholder="Ваше ім'я" class="popup-input" id="popup-name">
+      <input type="tel" placeholder="Ваш телефон" class="popup-input" id="popup-phone-input">
+      <button class="btn btn-gold btn-full" onclick="submitPopup()">Подзвоніть мені</button>
+    </form>
+    <p class="popup-privacy">«Натискаючи кнопку, ви даєте згоду на обробку персональних даних і погоджуєтесь з політикою конфіденційності»</p>
+    <div class="popup-success">Дані успішно відправлено. Спасибо!</div>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 <script>
