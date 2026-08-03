@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STROYHOUSE — сходи від виробника</title>
-  <meta name="description" content="STROYHOUSE — виробництво та встановлення сходів понад 30 років">
+  <title>СтройHouse - сходи від виробника у Києві та Київській області</title>
+  <meta name="description" content="Виробництво та встановлення сходів понад 30 років. Власне виробництво, досвідчені інженери, гарантія 3 роки.">
+  <meta property="og:title" content="СтройHouse - сходи від виробника у Києві та Київській області">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stroyhouse.org.ua">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -13,22 +16,37 @@
 <body>
 
 <!-- ═══════════════ HEADER ═══════════════ -->
-<header class="header">
+<header class="header" id="header">
   <div class="header-inner">
-    <a href="#" class="logo">
+    <a href="#home" class="logo">
       <img src="assets/logo.png" alt="STROYHOUSE" class="logo-img">
       <span class="logo-text">STROY <span class="logo-accent">HOUSE</span></span>
     </a>
-    <div class="header-right">
-      <span class="header-hours" data-i18n="hours">Понеділок — П'ятниця: 8:00 — 20:00</span>
-      <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="uk">UK</button>
-        <button class="lang-btn" data-lang="ru">RU</button>
-        <button class="lang-btn" data-lang="pl">PL</button>
-      </div>
+    <div class="header-contact">
+      <span class="header-hours">С понеділка по п'ятницю з 8:00 - 20:00</span>
+      <a href="tel:+380505746141" class="header-phone">
+        <img src="assets/phone-icon.svg" alt="" class="phone-icon">
+        <span>+380-50-574-61-41</span>
+      </a>
     </div>
+    <button class="btn btn-callback" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Передзвоніть мені
+    </button>
   </div>
 </header>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-link">Сходи</a>
+    <a href="#cta" class="nav-link">Розрахувати вартість</a>
+    <a href="#features" class="nav-link">Переваги</a>
+    <a href="#works" class="nav-link">Виконані роботи</a>
+    <a href="#process" class="nav-link">Етапи робіт</a>
+    <a href="#testimonials" class="nav-link">Відгуки</a>
+    <a href="#contact" class="nav-link">Контакти</a>
+  </div>
+</nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero" id="home">
@@ -36,64 +54,64 @@
   <div class="hero-overlay"></div>
   <div class="hero-container">
     <div class="hero-line"></div>
-    <p class="hero-subtitle" data-i18n="hero_badge">Займаємось виробництвом та встановленням сходів вже понад 30 років</p>
-    <h1 class="hero-title" data-i18n="hero_title">ВИБЕРІТЬ СХОДИ ДЛЯ СВОГО БУДИНКУ</h1>
-    <p class="hero-desc" data-i18n="hero_subtitle">Після вибору сходів ви отримаєте кошторис з ремонту та вартості матеріалів</p>
+    <p class="hero-subtitle">Займаємось виробництвом та встановленням сходів вже понад 30 років</p>
+    <h1 class="hero-title">ВИБЕРІТЬ СХОДИ ДЛЯ СВОГО БУДИНКУ</h1>
+    <p class="hero-desc">Після вибору сходів ви отримаєте кошторис з ремонту та вартості матеріалів</p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn btn-gold" data-i18n="hero_btn_calc">Розрахунок вартості</a>
-      <a href="#works" class="btn btn-outline-gold" data-i18n="hero_btn_more">Наші роботи</a>
+      <a href="#contact" class="btn btn-gold">Розрахувати вартість сходів</a>
+      <a href="#works" class="btn btn-outline-gold">Дізнатись ціни</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat-box">
         <span class="hero-stat-num">30+</span>
-        <span class="hero-stat-label" data-i18n="hero_stat1">Кваліфіковані інженери</span>
+        <span class="hero-stat-label">Кваліфіковані інженери</span>
       </div>
       <div class="hero-stat-box">
         <span class="hero-stat-num">1995</span>
-        <span class="hero-stat-label" data-i18n="hero_stat2">Власне виробництво</span>
+        <span class="hero-stat-label">Власне виробництво</span>
       </div>
       <div class="hero-stat-box">
-        <span class="hero-stat-num">2500+</span>
-        <span class="hero-stat-label" data-i18n="hero_stat3">готових об'єктів</span>
+        <span class="hero-stat-num">Понад 2500</span>
+        <span class="hero-stat-label">готових об'єктів</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════ CTA BANNER ═══════════════ -->
-<section class="cta-banner">
+<section class="cta-banner" id="cta">
   <div class="container">
-    <h2 data-i18n="cta_title">🪜 ОТРИМАЙТЕ РОЗРАХУНОК ВАРТОСТІ ВАШИХ СХОДІВ</h2>
-    <p data-i18n="cta_subtitle">Дайте відповідь на кілька питань — і ми підготуємо для вас попередній кошторис</p>
-    <a href="#contact" class="btn btn-dark" data-i18n="cta_btn">Замовити розрахунок</a>
+    <h2>🪜 ОТРИМАЙТЕ РОЗРАХУНОК ВАРТОСТІ ВАШИХ СХОДІВ</h2>
+    <p>Дайте відповідь на кілька питань — і ми підготуємо для вас попередній кошторис</p>
+    <a href="#contact" class="btn btn-dark">Замовити розрахунок</a>
   </div>
 </section>
 
 <!-- ═══════════════ SAFETY ═══════════════ -->
 <section class="section" id="about">
   <div class="container">
-    <h2 class="section-title" data-i18n="safety_title">МИ ПОДБАЄМО ПРО ВАШУ БЕЗПЕКУ</h2>
-    <p class="section-subtitle" data-i18n="safety_subtitle">Замовте надійні сходи для вашого будинку</p>
+    <h2 class="section-title">МИ ПОДБАЄМО ПРО ВАШУ БЕЗПЕКУ</h2>
+    <p class="section-subtitle">Замовте надійні сходи для вашого будинку</p>
     <div class="safety-grid">
       <div class="safety-item">
         <img src="assets/safety1.jpg" alt="">
         <div class="safety-num">1</div>
-        <p data-i18n="safety_1">Виготовимо сходи та огорожу, які ідеально впишуться у вашу оселю.</p>
+        <p>Виготовимо сходи та огорожу, які ідеально впишуться у вашу оселю.</p>
       </div>
       <div class="safety-item">
         <img src="assets/safety2.jpg" alt="">
         <div class="safety-num">2</div>
-        <p data-i18n="safety_2">Змонтуємо огородження з обох боків сходового маршу (за потреби).</p>
+        <p>Змонтуємо огородження з обох боків сходового маршу (за потреби).</p>
       </div>
       <div class="safety-item">
         <img src="assets/safety3.jpg" alt="">
         <div class="safety-num">3</div>
-        <p data-i18n="safety_3">Встановимо безпечну сходову огорожу.</p>
+        <p>Встановимо безпечну сходову огорожу.</p>
       </div>
       <div class="safety-item">
         <img src="assets/safety4.jpg" alt="">
         <div class="safety-num">4</div>
-        <p data-i18n="safety_4">Дізнайтеся вартість сходів та огорожі для вашого приміщення.</p>
+        <p>Дізнайтеся вартість сходів та огорожі для вашого приміщення.</p>
       </div>
     </div>
   </div>
@@ -102,27 +120,27 @@
 <!-- ═══════════════ FEATURES ═══════════════ -->
 <section class="section section-darker" id="features">
   <div class="container">
-    <h2 class="section-title" data-i18n="features_title">STROYHOUSE — експерт у виробництві сходів із 1995 року</h2>
+    <h2 class="section-title">STROYHOUSE — експерт у виробництві сходів із 1995 року</h2>
     <div class="features-grid">
       <div class="feature-card">
         <img src="assets/feature1.jpg" alt="">
-        <h3 data-i18n="f1_title">ВЛАСНЕ ВИРОБНИЦТВО</h3>
-        <p data-i18n="f1_text">Усі деталі для сходів та огорож виготовляються на власному виробництві STROYHOUSE.</p>
+        <h3>ВЛАСНЕ ВИРОБНИЦТВО</h3>
+        <p>Всі деталі для сходів та огорож виготовляються на власному виробництві STROYHOUSE.</p>
       </div>
       <div class="feature-card">
         <img src="assets/feature2.jpg" alt="">
-        <h3 data-i18n="f2_title">ВИСТАВКОВИЙ ЗАЛ</h3>
-        <p data-i18n="f2_text">Маємо власний виставковий зал, у якому представлені сходи з дерева та металу.</p>
+        <h3>ВИСТАВКОВИЙ ЗАЛ</h3>
+        <p>Маємо власний виставковий зал, в якому представлені сходи з дерева та металу.</p>
       </div>
       <div class="feature-card">
         <img src="assets/feature3.jpg" alt="">
-        <h3 data-i18n="f3_title">ДОСВІДЧЕНІ ІНЖЕНЕРИ</h3>
-        <p data-i18n="f3_text">Проєктуванням сходів займатимуться інженери з досвідом від 20 років.</p>
+        <h3>ДОСВІДЧЕНІ ІНЖИНЕРИ</h3>
+        <p>Проєктуванням сходів для вашого приміщення займатимуться інженери з досвідом від 20 років.</p>
       </div>
       <div class="feature-card">
         <img src="assets/feature4.jpg" alt="">
-        <h3 data-i18n="f4_title">ГАРАНТІЯ 3 РОКИ</h3>
-        <p data-i18n="f4_text">Усунемо несправність за власні кошти протягом 36 місяців.</p>
+        <h3>ГАРАНТІЯ 3 РОКИ</h3>
+        <p>Усунемо несправність за власні кошти протягом 36 місяців.</p>
       </div>
     </div>
   </div>
@@ -131,45 +149,37 @@
 <!-- ═══════════════ WORKS ═══════════════ -->
 <section class="section" id="works">
   <div class="container">
-    <h2 class="section-title" data-i18n="works_title">ОЗНАЙОМТЕСЯ З ПРИКЛАДАМИ ВИГОТОВЛЕНИХ СХОДІВ І ОГОРОЖ</h2>
+    <h2 class="section-title">ОЗНАЙОМТЕСЯ З ПРИКЛАДАМИ<br>ВИГОТОВЛЕНИХ СХОДІВ І ОГОРОЖ</h2>
     <div class="works-slider">
       <div class="works-track">
         <div class="work-card">
           <img src="assets/work1.jpg" alt="">
           <div class="work-body">
-            <h3 data-i18n="work1_title">ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
-            <p data-i18n="work1_text">Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
-            <span class="work-tag" data-i18n="work1_tag">Двоповерховий котедж</span>
+            <h3>ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
+            <p>Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
+            <span class="work-tag">Двоповерховий котедж, Київська обл.</span>
           </div>
         </div>
         <div class="work-card">
-          <img src="assets/stairs1.jpg" alt="">
+          <img src="assets/work2.jpg" alt="">
           <div class="work-body">
-            <h3 data-i18n="work1_title">ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
-            <p data-i18n="work1_text">Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
-            <span class="work-tag" data-i18n="work1_tag">Двоповерховий котедж</span>
+            <h3>ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
+            <p>Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
+            <span class="work-tag">Двоповерховий котедж, Київська обл.</span>
           </div>
         </div>
         <div class="work-card">
-          <img src="assets/stairs5.jpg" alt="">
+          <img src="assets/work3.jpg" alt="">
           <div class="work-body">
-            <h3 data-i18n="work1_title">ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
-            <p data-i18n="work1_text">Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
-            <span class="work-tag" data-i18n="work1_tag">Двоповерховий котедж</span>
-          </div>
-        </div>
-        <div class="work-card">
-          <img src="assets/stairs3.jpg" alt="">
-          <div class="work-body">
-            <h3 data-i18n="work1_title">ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
-            <p data-i18n="work1_text">Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
-            <span class="work-tag" data-i18n="work1_tag">Двоповерховий котедж</span>
+            <h3>ВСТАНОВИЛИ ГВИНТОВІ СХОДИ</h3>
+            <p>Встановили центральну стійку, поручні та спіралі. Навколо металевого стрижня закріпили клиноподібні проступи 750 мм. Потім закріпили щаблі до стійки перил. Матеріал сходинок: ясень.</p>
+            <span class="work-tag">Двоповерховий котедж, Київська обл.</span>
           </div>
         </div>
       </div>
     </div>
     <div class="works-cta">
-      <a href="#contact" class="btn btn-outline-gold" data-i18n="works_cta">ДИВІТЬСЯ НА ПРИКЛАДИ НАШИХ РОБІТ В ЖИВУ</a>
+      <a href="#contact" class="btn btn-outline-gold">ДИВІТЬСЯ НА ПРИКЛАДИ НАШИХ РОБІТ В ЖИВУ</a>
     </div>
   </div>
 </section>
@@ -177,27 +187,27 @@
 <!-- ═══════════════ PROCESS ═══════════════ -->
 <section class="section section-darker" id="process">
   <div class="container">
-    <h2 class="section-title" data-i18n="process_title">НАДАЄМО ПІДТРИМКУ НА ВСІХ ЕТАПАХ СПІВПРАЦІ</h2>
+    <h2 class="section-title">НАДАЄМО ПІДТРИМКУ НА ВСІХ ЕТАПАХ СПІВПРАЦІ</h2>
     <div class="process-grid">
       <div class="process-step">
         <img src="assets/step1.jpg" alt="">
         <div class="process-num">01</div>
-        <p data-i18n="step1_text">Покажемо приклади робіт, розповімо про виробництво StroyHouse.</p>
+        <p>Покажемо приклади робіт, розповімо про виробництво StroyHouse.</p>
       </div>
       <div class="process-step">
         <img src="assets/step2.jpg" alt="">
         <div class="process-num">02</div>
-        <p data-i18n="step2_text">Створюємо геометричний проєкт та затверджуємо його з вами. Готуємо детальні креслення всіх сходових елементів.</p>
+        <p>Створюємо геометричний проєкт та затверджуємо його з вами. Готуємо детальні креслення всіх сходових елементів.</p>
       </div>
       <div class="process-step">
         <img src="assets/step3.jpg" alt="">
         <div class="process-num">03</div>
-        <p data-i18n="step3_text">Інженер приїде на ваш об'єкт, проведе заміри приміщення та уточнить вартість виготовлення сходів та огорож.</p>
+        <p>Інженер під'їде на ваш об'єкт, проведе заміри приміщення та уточнить вартість виготовлення сходів та огорож.</p>
       </div>
       <div class="process-step">
-        <img src="assets/showcase1.jpg" alt="">
+        <img src="assets/step4.jpg" alt="">
         <div class="process-num">04</div>
-        <p data-i18n="step4_text">Виготовимо всі деталі на власному виробництві. Встановимо сходову конструкцію у вашому приміщенні.</p>
+        <p>Виготовимо всі деталі на власному виробництві. Встановимо сходову конструкцію у вашому приміщенні.</p>
       </div>
     </div>
   </div>
@@ -220,32 +230,47 @@
 </section>
 
 <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
-<section class="section section-darker">
+<section class="section section-darker" id="testimonials">
   <div class="container">
-    <h2 class="section-title" data-i18n="testimonials_title">ОСЬ ЩО ГОВОРЯТЬ НАШІ КЛІЄНТИ</h2>
+    <h2 class="section-title">ОСЬ ЩО ГОВОРЯТЬ<br>НАШІ КЛІЄНТИ</h2>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p>"Замовляв сходи для нового будинку. Зробили все чітко за термінами, якість відмінна. Сходи не скриплять, виглядають чудово."</p>
+        <p>Наша сім'я давно хотіла переїхати до власного затишного будинку. Придбали будинок нашої мрії, і одразу зіткнулися з необхідністю замінити сходи, що ве...</p>
+        <p class="testimonial-text-2">Знайомі порекомендували звернутися до StroyHouse. Наступного дня після звернення, інженери компанії оглянули наші сходи та склали кошторис на їх відно...</p>
+        <p class="testimonial-text-2">Тепер ми з дружиною не турбуємося за безпеку наших дітей, чиї кімнати знаходяться на другому поверсі. Дякуємо StroyHouse за гарні та безпечні сходи на...</p>
         <div class="testimonial-author">
           <img src="assets/comment1.jpg" alt="">
-          <span>Олег</span>
+          <div class="author-info">
+            <span class="author-name">Микола Васильович</span>
+            <span class="author-city">Обухів</span>
+          </div>
         </div>
       </div>
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p>"Дуже задоволені роботою STROYHOUSE. Інженер приїхав на заміри, все пояснив. Сходи встановили швидко та акуратно."</p>
+        <p>Протягом 2 років ми з чоловіком будували великий котедж за Києвом. У процесі будівництва вирішили замовити самонесучі сходи. Такі ж нещодавно компанія StroyHouse встановила в сусідньому будинку.</p>
+        <p class="testimonial-text-2">На початку інженери виконали розрахунки та зробили візуальний макет сходів. Як матеріал для сходів ми вибрали ясен. Нам дуже сподобалося те, як добре...</p>
+        <p class="testimonial-text-2">Дякуємо компанії StroyHouse і розраховуємо на подальшу співпрацю!</p>
         <div class="testimonial-author">
           <img src="assets/comment2.jpg" alt="">
-          <span>Марія</span>
+          <div class="author-info">
+            <span class="author-name">Валерія Дячкова</span>
+            <span class="author-city">Боярка</span>
+          </div>
         </div>
       </div>
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p>"Працюємо з цією компанією вже вдруге. Перший раз — сходи для батьків, тепер для себе. Завжди якісний результат і чесні ціни."</p>
+        <p>Коли постало питання встановлення сходів, я багато часу витратив на вивчення інформації, спілкуванні з різними фірмами та фабриками.</p>
+        <p class="testimonial-text-2">Коли зателефонував до StroyHouse, одразу зрозумів, у сходах вони розуміються. Сходи, річ не з дешевих і мені був важливий кожен момент.</p>
+        <p class="testimonial-text-2">У результаті ми дійшли рішення не економити на сходах і правильно зробили. Через три роки сходи як нові!</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar-text">А</div>
-          <span>Андрій</span>
+          <img src="assets/comment3.jpg" alt="">
+          <div class="author-info">
+            <span class="author-name">Дмитро Сергійович</span>
+            <span class="author-city">Ірпінь</span>
+          </div>
         </div>
       </div>
     </div>
@@ -257,12 +282,12 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
-        <h2 data-i18n="contact_title">ПРОКОНСУЛЬТУЙТЕСЬ З ІНЖЕНЕРОМ STROYHOUSE</h2>
-        <p data-i18n="contact_subtitle">Відповімо на всі ваші запитання та обговоримо:</p>
+        <h2>ПРОКОНСУЛЬТУЙТЕСЯ З ІНЖЕНЕРОМ STROYHOUSE</h2>
+        <p>Відповімо на всі ваші запитання та обговоримо:</p>
         <ul class="contact-list">
-          <li data-i18n="contact_1">Вартість виготовлення сходів для вашого будинку</li>
-          <li data-i18n="contact_2">Матеріали, терміни виготовлення огорож</li>
-          <li data-i18n="contact_3">Технологію виробництва сходів</li>
+          <li>Вартість виготовлення сходів для вашого будинку</li>
+          <li>Матеріали, терміни виготовлення огорож</li>
+          <li>Технологію виробництва сходів</li>
         </ul>
         <div class="contact-showcase">
           <img src="assets/showcase2.jpg" alt="">
@@ -271,19 +296,17 @@
       </div>
       <form class="contact-form" onsubmit="return false;">
         <div class="form-group">
-          <input type="text" data-i18n="form_name" placeholder="Ваше ім'я" required>
+          <input type="text" placeholder="Ваше Ім'я" required>
         </div>
         <div class="form-group">
-          <input type="email" data-i18n="form_email" placeholder="Ваш email" required>
+          <input type="tel" placeholder="Ваш телефон" required>
         </div>
         <div class="form-group">
-          <input type="tel" data-i18n="form_phone" placeholder="Ваш телефон" required>
+          <textarea placeholder="Ваше повідомлення" required></textarea>
         </div>
-        <div class="form-group">
-          <textarea data-i18n="form_message" placeholder="Ваше повідомлення" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold btn-full" data-i18n="form_submit">Надіслати</button>
-        <div class="form-success" data-i18n="form_success">Дякуємо! Ми зв'яжемося з вами найближчим часом.</div>
+        <button type="submit" class="btn btn-gold btn-full">Надіслати</button>
+        <p class="form-privacy">Натискаючи на кнопку, ви погоджуєтесь на обробку персональних даних</p>
+        <div class="form-success">Дані успішно відправлено. Дякуємо!</div>
       </form>
     </div>
   </div>
@@ -295,19 +318,21 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/logo.png" alt="STROYHOUSE" class="footer-logo">
-        <p data-i18n="footer_tagline">Виготовлення сходів, огорож та металевих конструкцій під ключ</p>
+        <p>Виготовлення сходів, огорож та металевих конструкцій під ключ у Києві та Київській області</p>
       </div>
       <div class="footer-col">
-        <h4 data-i18n="hours">Понеділок — П'ятниця: 8:00 — 20:00</h4>
+        <a href="mailto:stroyhouse.kiev@gmail.com" class="footer-email">stroyhouse.kiev@gmail.com</a>
+        <p class="footer-legal">ФОП КОСТЮК ВАСИЛЬ ВОЛОДИМИРОВИЧ</p>
+        <p class="footer-legal">ІПН 2508511753</p>
+        <p class="footer-legal">м. Київ вул. Регенераторна 4</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> STROYHOUSE. <span data-i18n="footer_rights">Усі права захищені</span></p>
+      <p>© <span id="year"></span> STROYHOUSE. Усі права захищені</p>
     </div>
   </div>
 </footer>
 
-<script src="js/lang.js"></script>
 <script src="js/main.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();

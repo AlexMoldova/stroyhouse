@@ -1,49 +1,52 @@
 // ============================================================
 //  STROYHOUSE — Main JS
-//  Form handling, smooth scroll, mobile menu
+//  Header scroll, nav scroll, form handling, slider
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ───── Mobile menu toggle ─────
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-  if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      menuToggle.classList.toggle('active');
-    });
-    // Close on nav link click
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        menuToggle.classList.remove('active');
-      });
-    });
-  }
-
-  // ───── Header shrink on scroll ─────
+  // ───── Header & Nav shrink on scroll ─────
   const header = document.querySelector('.header');
-  let lastScroll = 0;
+  const nav = document.querySelector('.nav');
+  
   window.addEventListener('scroll', () => {
     const current = window.scrollY;
     if (current > 80) {
-      header.style.padding = '10px 0';
-      header.style.background = 'rgba(23, 23, 23, 0.95)';
+      header.classList.add('scrolled');
+      nav.classList.add('scrolled');
     } else {
-      header.style.padding = '16px 0';
-      header.style.background = 'rgba(23, 23, 23, 0.85)';
+      header.classList.remove('scrolled');
+      nav.classList.remove('scrolled');
     }
-    lastScroll = current;
   });
 
-  // ───── Form submit (no backend — just show success) ─────
-  const form = document.querySelector('.contact-form form');
+  // ───── Active nav link on scroll ─────
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // ───── Form submit ─────
+  const form = document.querySelector('.contact-form');
   const successMsg = document.querySelector('.form-success');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Basic validation
       const inputs = form.querySelectorAll('input, textarea');
       let valid = true;
       inputs.forEach(inp => {
@@ -67,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-  document.querySelectorAll('.feature-card, .work-card, .process-step, .safety-item, .testimonial-card').forEach(el => {
+  document.querySelectorAll('.feature-card, .work-card, .process-step, .safety-item, .testimonial-card, .showcase-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
